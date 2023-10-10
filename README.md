@@ -12,3 +12,29 @@ Currently, two official plugins are available:
 
 
 But proposé : Make my own Pokedex!
+
+10/10/2023
++ Structuration of all
+
++ Composants : 
+
+    + PokemonCard :
+        Pokemon Card (take PokemonBanq data)
+
+    + Randomizer :
+        Random value
+
+    + PokemonBanq : 
+        Array pokemonList with : 
+            -name 
+            -img 
+            -id 
+            -description
+            -types
+
++ Début du CSS pour plus de lisibilité
+
+
+- Idée : 
+
+- Récupérer type1 et type2 pour definir les couleurs des cartes.
