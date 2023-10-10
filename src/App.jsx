@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import pokemonList from "./components/PokedexBank";
+import PokemonCard from "./components/PokemonCard";
+import Randomizer from "./components/randomizer";
+import React, { useState } from 'react';
 
+const actRandomizer = () => {
+  window.location.reload();
+};
+
+const randomPokemon = Randomizer(pokemonList);
+console.log(randomPokemon.name);
+/* CARD */
 function App() {
-  const [count, setCount] = useState(0)
+  const [aPokemon, aPokemon2] = useState(randomPokemon);
 
+  function swPokemon() {
+    const i = pokemonList.findIndex(e => e.name === aPokemon.name)
+    const j = (i + 1) % pokemonList.length;
+    
+    aPokemon2(pokemonList[j])
+  }
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div id ="pkmnCard">
+      <PokemonCard pokemon={aPokemon} />
+      <button className="nextBtn" onClick={swPokemon}>Next Pokemon</button>
+      {/* <button onClick={randomPokemon}>Randomize</button> */}
+      <button className="randBtn" onClick={actRandomizer}>Random</button>
+    </div>
+  );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default App
