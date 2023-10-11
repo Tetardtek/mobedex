@@ -2,6 +2,7 @@ import pokemonList from "./components/PokedexBank";
 import PokemonCard from "./components/PokemonCard";
 import Randomizer from "./components/Randomizer";
 import React, { useState } from 'react';
+import PropTypes from 'prop-types'
 
 const actRandomizer = () => {
   window.location.reload();
@@ -29,7 +30,12 @@ function App() {
   );
 }
 
-
+App.propTypes = {
+  pokemon: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    img: PropTypes.string,
+  })
+};
 
 
 
