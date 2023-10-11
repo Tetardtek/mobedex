@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mobedex v1</title>
+    <title>Mobedex v1.0.0</title>
     </head>
   <body>
-    <header>
-      <ul class="menu">
-        <li><a href="#">Mobedex</li>
-        <li><a href="#">Randomizer</li>
-        <li><a href="#">Collection</li>
-      </ul>
+    <header id="navbar">
+      <script>
+        fetch("./navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar").innerHTML = data;
+          });
+      </script>
     </header>
     <main>
         <div id="root"></div>
