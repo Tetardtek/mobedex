@@ -1,48 +1,19 @@
-const pokemonList = [
-    {
-      name: "Bulbasaur",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-      name: "Mew",
-    },
-    {
-        name: "Squirtle",
-        imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
-      }, 
-      {
-        name: "Charmander",
-        imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
-      },
-  ];
-  
 
- let pokemon = pokemonList[3];
-  
-  function PokemonCard() {
-    if (pokemon.imgSrc !== undefined) {
-  return <figure>
-      <img className="pkmnPic" src={pokemon.imgSrc} alt={pokemon.name}/>
-      <figcaption>{pokemon.name}</figcaption>
-  </figure>
-    } else {
-        return <figure><p>???</p>
-        <figcaption>{pokemon.name}</figcaption>
-        </figure>
+function PokemonCard({pokemon}) {
+  if (pokemon.imgSrc !== undefined) {
+    return (
+      <figure>
+        {pokemon.imgSrc ? (
+          <img className="pkmnPic" src={pokemon.imgSrc} alt={pokemon.name} />
+        ) : (
+          <p>???</p>
+        )}
+        <figcaption><strong>PokeN° : {pokemon.id}</strong> {pokemon.name}</figcaption>
+      <section className="pkmnDesc">{pokemon.desc}</section>
+      <section className="pkmnTypes1">{pokemon.pkmnTypes[0]}</section>
+      <section className="pkmnTypes2">{pokemon.pkmnTypes[1]}</section>
+      </figure>
+    );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 export default PokemonCard;
