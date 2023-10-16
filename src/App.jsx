@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Randomizer from './components/Randomizer';
 import PokemonCard from './components/PokemonCard';
 import pokemonList from './components/PokedexBank';
+import NavBar from './components/NavBar'
 
 function App() {
   const [pokemonState, setPokemonState] = useState({
@@ -51,7 +52,17 @@ function App() {
   return (
     <div>
       <div id="pkmnCard">
-        <PokemonCard pokemon={pokemonState.randiPokemon} /><div className="pkmnNav">
+        <PokemonCard 
+        pokemon={pokemonState.randiPokemon} />
+        <NavBar 
+        clickPrev = {() => swPokemon("prev")}
+        clickNext = {() => swPokemon("next")}
+        clickRdm = {() => actRandomizer("random")}
+        disabledPrev = {pokemonState === 0}
+        disabledNext = {pokemonState === pokemonList.length-1}
+        disabledRdm = {pokemonState === pokemonState.randiPokemon}
+      />
+        {/* <div className="pkmnNav">
         <button className="nextBtn" onClick={() => swPokemon('next')}>
           Next
         </button>
@@ -61,7 +72,7 @@ function App() {
         <button className="randBtn" onClick={actRandomizer}>
           Random
         </button>
-      </div>
+      </div> */}
     </div>
     </div>
   );
