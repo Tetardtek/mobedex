@@ -176,6 +176,10 @@ section.pkmnDesc {
 div.pkmnNav {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+#pkmnCard > div > div {
+ background-color: red;
 }
 button {
   color:#DF7AA7;
