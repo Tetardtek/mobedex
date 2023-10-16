@@ -2,7 +2,7 @@ const pokemonList = [
   {
     name: "Bulbizarre",
     imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
     id: "1",
     desc: "Fleur sur le dos. Plante/Venin",
     pkmnTypes: ["Plante", "Venin"],
@@ -471,15 +471,6 @@ const pokemonList = [
     desc: "Légendaire. Feu",
     pkmnTypes: ["Feu"],
   },
-  {
-    name: "Ptitard",
-    imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/60.png",
-    id: "60",
-    desc: "Têtard. Eau",
-    pkmnTypes: ["Eau"],
-  },
-
   {
     name: "Ptitard",
     imgSrc:
