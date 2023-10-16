@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Randomizer from './components/Randomizer';
 import PokemonCard from './components/PokemonCard';
@@ -29,7 +29,7 @@ function App() {
 
   function actRandomizer() {
     setPokemonState((prevState) => {
-      const currentIndex = prevState.currentIndex;
+
       return {
         ...prevState,
         randiPokemon: Randomizer(pokemonList),
@@ -68,10 +68,13 @@ function App() {
 }
 
 App.propTypes = {
-  pokemon: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    img: PropTypes.string,
-  }),
+pokemon: PropTypes.shape({
+    imgSrc: PropTypes.string,
+    name: PropTypes.string,
+    id: PropTypes.number,
+    desc: PropTypes.string,
+    pkmnTypes: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
 };
 
 export default App;
