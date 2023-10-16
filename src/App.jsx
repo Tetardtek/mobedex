@@ -61,6 +61,8 @@ function App() {
         disabledPrev = {pokemonState === 0}
         disabledNext = {pokemonState === pokemonList.length-1}
         disabledRdm = {pokemonState === pokemonState.randiPokemon}
+        pokemonList = {pokemonList}
+        setPokemonState = {setPokemonState}
       />
         {/* <div className="pkmnNav">
         <button className="nextBtn" onClick={() => swPokemon('next')}>
