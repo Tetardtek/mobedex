@@ -12,29 +12,27 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
-  
 }
 
 a {
   font-weight: 500;
-  color: #CAE472;
+  color: #cae472;
   text-decoration: inherit;
   text-decoration: none;
   list-style: none;
 }
 a:hover {
-  color: #CAE472;
+  color: #cae472;
 }
 
 body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
-    flex-direction: column;
-    position: relative;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  flex-direction: column;
+  position: relative;
 }
 
 h1 {
@@ -108,7 +106,7 @@ div#root {
 header#navbar {
   box-shadow: 3px 3px 3px 3px #00000077;
   display: flex;
-  color: #CAE472; 
+  color: #cae472;
   border-radius: 5px;
   block-size: 5em;
   flex-direction: row-reverse;
@@ -138,7 +136,6 @@ menu:hover {
 section#pkmnName {
   display: flex;
   background-color: red;
-  
 }
 
 /***************** PKMNCARD **********************/
@@ -149,7 +146,7 @@ div#pkmnCard {
 }
 
 figcaption {
-  background-color: #CAE472;
+  background-color: #cae472;
   max-width: 100%;
   max-height: 50%;
   display: flex;
@@ -162,7 +159,7 @@ section.pkmnDesc {
   box-shadow: 3px 3px 3px 3px #00000077;
   display: flex;
   background-color: #786d72;
-  color: #CAE472; 
+  color: #cae472;
   border-radius: 5px;
   block-size: 5em;
   flex-direction: row-reverse;
@@ -179,17 +176,17 @@ div.pkmnNav {
   align-items: center;
 }
 #pkmnCard > div > div {
- background-color: red;
+  background-color: none;
 }
 button {
-  color:#DF7AA7;
+  color: #df7aa7;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #CFE883;
+  background-color: #cfe883;
   cursor: pointer;
   transition: border-color 0.25s;
   margin-block: 1em;
@@ -198,7 +195,7 @@ button {
 section.pkmnTypes {
   display: flex;
   justify-content: space-around;
-  color: #CAE472;
+  color: #cae472;
   border-radius: 8px;
   border: 1px solid transparent;
   font-weight: 500;
@@ -215,11 +212,11 @@ footer {
   */
   bottom: 0;
   left: 0;
-  right: 0; 
+  right: 0;
   display: flex;
-  position:absolute;
+  position: absolute;
   max-width: 100%;
   padding: 5px;
-  color: #DF7AA7;
-  background-color: #CAE472;
+  color: #df7aa7;
+  background-color: #cae472;
 }
